@@ -7,6 +7,7 @@
 - Specify a CIDR block of 192.168.0.0/23
 
 <img width="1626" height="337" alt="image" src="https://github.com/user-attachments/assets/943f3269-f5b0-4848-87fb-31e0a9b0a8ec" />
+
 - Role: The VPC allows you to launch resources to a network you fefine. it serves as the foundation for your cloud network, where you can control things like IP adress ranges, subnets, route tables, internet connectivity, and security settings. It basically defines the networking eviroment in which EC2 instances and otherr AWS resources operate. 
 
 - At any point in the process of creating a VPC and its related resources, additional information may be requested like CIDR block ranges, subnet configuration, route table associations, internet gateway setup , security settings , security groups, network ACLs, and elastic IPs. These ensure that your network is correct, secured, and connected which are the design goals of the VPC.
@@ -16,6 +17,7 @@
 - Reserve 192.168.0.0 - 192.168.0.255 for use on this subnet
 
 <img width="1636" height="254" alt="image" src="https://github.com/user-attachments/assets/dc66590b-f252-44ed-b189-18a78de9f0c8" />
+
 - Role: This subnet reserves the IP adress range 192.168.0.0 - 192.168.0.255 within my VCP. 
 
 - The subnet uses CIDR block 192.168.0.0/24 which is the IP range 192.168.0.0 - 192.168.0.255, the subnet is created inside the VCP, the avaliablity zone was set to no prefrences, laslty tagging the subnet helps label and organize.
@@ -25,17 +27,19 @@
 - Attach it to your VPC
 
 <img width="1472" height="363" alt="image" src="https://github.com/user-attachments/assets/812dbafa-a379-4e17-b554-b43adf5182be" />
+
 - Role: The internet gateway allows my VCP to connect to the internet. It enabels communication between resources in the VCP and the internet by routing the traffic from the VCP to everything else. 
 
 - The internet gateway was created and named Squires-gw, it was attached to my VPC to enable communication, and lastly this has to be done befor routing table to allow public internet access. 
 
 ## Create Route Table 
-Name: SQUIRES-rt
-Attach it to your VPC
-Associate it with your subnet
-Add a routing table rule that sends traffic to destinations external to your subnet CIDR block to your internet gateway
+- Name: SQUIRES-rt
+  
+<img width="1625" height="571" alt="image" src="https://github.com/user-attachments/assets/93a5136e-1b2e-4663-b355-0d751e510e59" />
 
-<!-- a description of what the resource does (what is its role). responses to additional requests for information in any step. a screenshot that shows the resource has been created according to specification -->
+- Role: The route table controls how traffic is routed within the VPC. It allows internal communication between subnets and external traffic to reach the iternet through a gateway.
+
+- The route table is attached to my VPC, is associated with my subnet, and has its defualt route with an addtional one to my internet gateway.
 
 ## Create a Security Group   
 Name: SQUIRES-sg  
