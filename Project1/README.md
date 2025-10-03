@@ -7,8 +7,9 @@ Name: SQUIRES-VPC
 Specify a CIDR block of 192.168.0.0/23
 
 <img width="1626" height="337" alt="image" src="https://github.com/user-attachments/assets/943f3269-f5b0-4848-87fb-31e0a9b0a8ec" />
-Role: The VPC allows you to launch resources to a network you fefine. it serves as the foundation for your cloud network, where you can control things like IP adress ranges, subnets, route tables, internet connectivity, and security settings. It basically defines the networking eviroment in which EC2 instances and otherr AWS resources operate. <br>
-
+Role: The VPC allows you to launch resources to a network you fefine. it serves as the foundation for your cloud network, where you can control things like IP adress ranges, subnets, route tables, internet connectivity, and security settings. It basically defines the networking eviroment in which EC2 instances and otherr AWS resources operate. 
+&nbsp;
+<!-- Googeled how to put spacing between te not remember-->
 
 At any point in the process of creating a VPC and its related resources, additional information may be requested like CIDR block ranges, subnet configuration, route table associations, internet gateway setup , security settings , security groups, network ACLs, and elastic IPs. These ensure that your network is correct, secured, and connected which are the design goals of the VPC.
 
@@ -18,7 +19,7 @@ Reserve 192.168.0.0 - 192.168.0.255 for use on this subnet
 
 <img width="1636" height="254" alt="image" src="https://github.com/user-attachments/assets/dc66590b-f252-44ed-b189-18a78de9f0c8" />
 Role: This subnet reserves the IP adress range 192.168.0.0 - 192.168.0.255 within my VCP. 
-
+&nbsp;
 
 The subnet uses CIDR block 192.168.0.0/24 which is the IP range 192.168.0.0 - 192.168.0.255, the subnet is created inside the VCP, the avaliablity zone was set to no prefrences, laslty tagging the subnet helps label and organize.
 
@@ -27,7 +28,11 @@ The subnet uses CIDR block 192.168.0.0/24 which is the IP range 192.168.0.0 - 19
 Name: SQUIRES-gw  
 Attach it to your VPC
 
-<!-- a description of what the resource does (what is its role). responses to additional requests for information in any step. a screenshot that shows the resource has been created according to specification -->
+<img width="1472" height="363" alt="image" src="https://github.com/user-attachments/assets/812dbafa-a379-4e17-b554-b43adf5182be" />
+Role: The internet gateway allows my VCP to connect to the internet. It enabels communication between resources in the VCP and the internet by routing the traffic from the VCP to everything else. 
+&nbsp;
+
+The internet gateway was created and named Squires-gw, it was attached to my VPC to enable communication, and lastly this has to be done befor routing table to allow public internet access. 
 
 ## Create Route Table 
 Name: SQUIRES-rt
