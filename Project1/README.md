@@ -6,7 +6,10 @@
 Name: SQUIRES-VPC  
 Specify a CIDR block of 192.168.0.0/23
 
-<!-- a description of what the resource does (what is its role). responses to additional requests for information in any step. a screenshot that shows the resource has been created according to specification -->
+<img width="1626" height="337" alt="image" src="https://github.com/user-attachments/assets/943f3269-f5b0-4848-87fb-31e0a9b0a8ec" />
+Role: The VPC allows you to launch resources to a network you fefine. it serves as the foundation for your cloud network, where you can control things like IP adress ranges, subnets, route tables, internet connectivity, and security settings. It basically defines the networking eviroment in which EC2 instances and otherr AWS resources operate. 
+
+At any point in the process of creating a VPC and its related resources, additional information may be requested like CIDR block ranges, subnet configuration, route table associations, internet gateway setup , security settings , security groups, network ACLs, and elastic IPs. These ensure that your network is correct, secured, and connected which are the design goals of the VPC.
 
 ## Create a Subnet  
 Name: SQUIRES-Subnet  
