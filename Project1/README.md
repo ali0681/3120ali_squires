@@ -9,15 +9,19 @@ Specify a CIDR block of 192.168.0.0/23
 <img width="1626" height="337" alt="image" src="https://github.com/user-attachments/assets/943f3269-f5b0-4848-87fb-31e0a9b0a8ec" />
 Role: The VPC allows you to launch resources to a network you fefine. it serves as the foundation for your cloud network, where you can control things like IP adress ranges, subnets, route tables, internet connectivity, and security settings. It basically defines the networking eviroment in which EC2 instances and otherr AWS resources operate. 
 
+
 At any point in the process of creating a VPC and its related resources, additional information may be requested like CIDR block ranges, subnet configuration, route table associations, internet gateway setup , security settings , security groups, network ACLs, and elastic IPs. These ensure that your network is correct, secured, and connected which are the design goals of the VPC.
 
 ## Create a Subnet  
 Name: SQUIRES-Subnet  
 Reserve 192.168.0.0 - 192.168.0.255 for use on this subnet
-Attach it to your VPC
-Document the reserved block for the subnet and the remaining block(s) available in VPC
 
-<!-- a description of what the resource does (what is its role). responses to additional requests for information in any step. a screenshot that shows the resource has been created according to specification -->
+<img width="1636" height="254" alt="image" src="https://github.com/user-attachments/assets/dc66590b-f252-44ed-b189-18a78de9f0c8" />
+Role: This subnet reserves the IP adress range 192.168.0.0 - 192.168.0.255 within my VCP. 
+
+
+The subnet uses CIDR block 192.168.0.0/24 which is the IP range 192.168.0.0 - 192.168.0.255, the subnet is created inside the VCP, the avaliablity zone was set to no prefrences, laslty tagging the subnet helps label and organize.
+
 
 ## Create an Internet Gateway
 Name: SQUIRES-gw  
@@ -44,7 +48,7 @@ Make sure screenshot includes content of the Inbound rules
 
 <!-- a description of what the resource does (what is its role). responses to additional requests for information in any step. a screenshot that shows the resource has been created according to specification -->
 
-##Modify or create a Network ACL
+## Modify or create a Network ACL
 Name: Squires-nacl
 Affirm association or associate resource with the subnet
 Verify that for Inbound & Outbound there is a rule that Allows any IP (v4 only is sufficient) on all ports
