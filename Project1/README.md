@@ -80,3 +80,22 @@ Document the difference between an Elastic IP and a Public IP.
 - Role: Provides a static public IP adress for consistent access. 
   
 - Elastic IPs are ideal when you need a constient adress for services, remote SSH, DNS records, or failover systems.
+
+# Part 2: EC2 Instances Creation
+
+## Create a new instance
+ In addition to describing what an instance is and how-to launch a new one, find and document the following information about the instance you have built:
+AMI selected - AMI id & OS with version
+default username of the instance type selected
+instance type selected
+keypair selected
+describe why you need to select a keypair
+the how-to launch an instance instructions should include coverage on how-to:
+Attach the instance to your subnet within your VPC
+Associate your security group, "YOURLASTNAME-sg" to your instance.
+Attach a volume to your instance.
+Tag your instance with a "Name" of "YOURLASTNAME-instance".
+
+## Associate the Elastic IP with your instance
+
+## Create a screenshot of your instances detail after instances has been launched and ass it to your project write up
