@@ -84,18 +84,19 @@ Document the difference between an Elastic IP and a Public IP.
 # Part 2: EC2 Instances Creation
 
 ## Create a new instance
- In addition to describing what an instance is and how-to launch a new one, find and document the following information about the instance you have built:
-AMI selected - AMI id & OS with version
-default username of the instance type selected
-instance type selected
-keypair selected
-describe why you need to select a keypair
-the how-to launch an instance instructions should include coverage on how-to:
-Attach the instance to your subnet within your VPC
-Associate your security group, "YOURLASTNAME-sg" to your instance.
-Attach a volume to your instance.
-Tag your instance with a "Name" of "YOURLASTNAME-instance".
+An EC2 instance is a virtual machine running AWS that provided capcity in the cloud. It can be used to host applications, perform computions, or run services. To launch an instance the following steps were followed: This is how to luach
+
+- use defualt Aamazon machine image
+- use defualt instance type
+- select my key pair (Squires-Key)
+- attach my security group (Squires-sg)
+- leave configure the same
+- leave advance defualt
+- then launch
+- My VPC was already selected and couldnt be changed
 
 ## Associate the Elastic IP with your instance
+-My EIP Squires-EIP wass associated with the instances to allow constience acess. 
 
-## Create a screenshot of your instances detail after instances has been launched and ass it to your project write up
+<img width="1625" height="224" alt="image" src="https://github.com/user-attachments/assets/7fd19870-a4b9-4ebe-88b7-ca795033467c" />
+
