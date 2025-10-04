@@ -53,16 +53,30 @@
 - Name: Squires-nacl
 
 <img width="1620" height="555" alt="image" src="https://github.com/user-attachments/assets/32e9c8ae-6e6a-4c9e-919b-cea4a5a1b7b8" />
-- Rule: 
+- Role: The network ACL acts as a stateless firewall at the subnet level. It controls inbound and outbound traffic to form allowed or denied, based on protocol, port range, and IP adress. By defualt all traffic is denied so exsplicit rules must be added.
+
+- Confirmed the requirments to allow traffic on all ports for both inbound and outbound, confimed the need to deny outbound connections to wttr.in.
 
 
 ## Identify OR create a Key Pair
 Document how the public and private keys of a key pair are stored.
+- Squires-Key
+The key pair enabels SSH access to EC2 instances. The public key is stored in AWS and the private key was downloaded as a .pem file and saved locally.
+- public key: stored when the key was created
+- private key: file Squires-Key.pem was downloades and saved securely.
+ 
+<img width="1634" height="308" alt="image" src="https://github.com/user-attachments/assets/40bba763-36e8-4401-8e7c-7234785718ad" />
+- Role: The key pair is used to securely connect to EC2 instances using SSH. The public key the public key is stored in AWS, and the private key is downloaded and stored securely by the user. This allows athentication when accessing the instance without using a password. 
 
-<!-- a description of what the resource does (what is its role). responses to additional requests for information in any step. a screenshot that shows the resource has been created according to specification -->
+- The private key was downladed, the public key is automatically stored in AWS and used when launching EC2 instances, the key pair enabeles secure, encrypted communication between the user and their server.
 
-## Reserve an Elastic !P adress
-Name: Squires-EIP
+## Reserve an Elastic IP adress
+- Name: Squires-EIP
 Document the difference between an Elastic IP and a Public IP.
+- Public IP is assigned automatically to an instance at launch and change when the instances is stopped and started.
+- Elastic IP is a static IP adress that remains the same and can be reassociated with different instances if needed.
 
-<!-- a description of what the resource does (what is its role). responses to additional requests for information in any step. a screenshot that shows the resource has been created according to specification -->
+<img width="1626" height="570" alt="image" src="https://github.com/user-attachments/assets/220bcc72-81ba-4432-90a0-b238a7600014" />
+- Role: Provides a static public IP adress for consistent access. 
+  
+- Elastic IPs are ideal when you need a constient adress for services, remote SSH, DNS records, or failover systems.
