@@ -3,7 +3,7 @@
 # Part 1: Build a VPC
 
 ## Create a VPC  
-- Name: SQUIRES-VPC  
+- Name: Squires-VPC  
 - Specify a CIDR block of 192.168.0.0/23
 
 <img width="1626" height="337" alt="image" src="https://github.com/user-attachments/assets/943f3269-f5b0-4848-87fb-31e0a9b0a8ec" />
@@ -13,7 +13,7 @@
 - At any point in the process of creating a VPC and its related resources, additional information may be requested like CIDR block ranges, subnet configuration, route table associations, internet gateway setup , security settings , security groups, network ACLs, and elastic IPs. These ensure that your network is correct, secured, and connected which are the design goals of the VPC.
 
 ## Create a Subnet  
-- Name: SQUIRES-Subnet  
+- Name: Squires-Subnet  
 - Reserve 192.168.0.0 - 192.168.0.255 for use on this subnet
 
 <img width="1636" height="254" alt="image" src="https://github.com/user-attachments/assets/dc66590b-f252-44ed-b189-18a78de9f0c8" />
@@ -23,7 +23,7 @@
 - The subnet uses CIDR block 192.168.0.0/24 which is the IP range 192.168.0.0 - 192.168.0.255, the subnet is created inside the VCP, the avaliablity zone was set to no prefrences, laslty tagging the subnet helps label and organize.
 
 ## Create an Internet Gateway
-- Name: SQUIRES-gw  
+- Name: Squires-gw  
 - Attach it to your VPC
 
 <img width="1472" height="363" alt="image" src="https://github.com/user-attachments/assets/812dbafa-a379-4e17-b554-b43adf5182be" />
@@ -33,7 +33,7 @@
 - The internet gateway was created and named Squires-gw, it was attached to my VPC to enable communication, and lastly this has to be done befor routing table to allow public internet access. 
 
 ## Create Route Table 
-- Name: SQUIRES-rt
+- Name: Squires-rt
   
 <img width="1625" height="571" alt="image" src="https://github.com/user-attachments/assets/93a5136e-1b2e-4663-b355-0d751e510e59" />
 
@@ -42,24 +42,19 @@
 - The route table is attached to my VPC, is associated with my subnet, and has its defualt route with an addtional one to my internet gateway.
 
 ## Create a Security Group   
-Name: SQUIRES-sg  
-Allow SSH for a set of trusted source networks including:
-Your home / where you usually connect to your instances from
-Wright State (addresses in CIDR block 130.108.0.0/16)
-Instances within the VPC
-Attach it to your VPC
-Make sure screenshot includes content of the Inbound rules
+- Name: Squires-sg  
 
-<!-- a description of what the resource does (what is its role). responses to additional requests for information in any step. a screenshot that shows the resource has been created according to specification -->
+<img width="1641" height="588" alt="image" src="https://github.com/user-attachments/assets/5361e62d-31f6-4e19-9dbd-d20658444a28" />
+- Role: The security gtoup controls inbound traffic to instances tith the my VPC. It is configured to allow SSH access from three specific sources home, wright state, and VPC instance.
+
+- The security group was tagged with the name Squires-sg, inbound rules were configured to allow SSH access from my three sources, the security group is attached to my VPC, no outbound rules were added.
 
 ## Modify or create a Network ACL
-Name: Squires-nacl
-Affirm association or associate resource with the subnet
-Verify that for Inbound & Outbound there is a rule that Allows any IP (v4 only is sufficient) on all ports
-If this rule does not exist, you'll need to create it. Created Network ACL's are Deny all traffic on all ports, Inbound and Outbound, by default.
-Deny outbound connections to any port on wttr.in
+- Name: Squires-nacl
 
-<!-- a description of what the resource does (what is its role). responses to additional requests for information in any step. a screenshot that shows the resource has been created according to specification -->
+<img width="1620" height="555" alt="image" src="https://github.com/user-attachments/assets/32e9c8ae-6e6a-4c9e-919b-cea4a5a1b7b8" />
+- Rule: 
+
 
 ## Identify OR create a Key Pair
 Document how the public and private keys of a key pair are stored.
