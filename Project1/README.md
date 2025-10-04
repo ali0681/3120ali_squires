@@ -96,7 +96,25 @@ An EC2 instance is a virtual machine running AWS that provided capcity in the cl
 - My VPC was already selected and couldnt be changed
 
 ## Associate the Elastic IP with your instance
--My EIP Squires-EIP wass associated with the instances to allow constience acess. 
+- My EIP Squires-EIP wass associated with the instances to allow constience acess. 
 
 <img width="1625" height="224" alt="image" src="https://github.com/user-attachments/assets/7fd19870-a4b9-4ebe-88b7-ca795033467c" />
+
+# Part 3
+I have no clue why but it can not find my Key even being downloaded 
+## SSH acess
+- ssh -i ~/keys/Squires-key.pem ec2-user@13.222.162.182
+
+## Changing host name
+- sudo cp /etc/hostname /etc/hostname.old
+- echo "Squires-AMI" | sudo tee /etc/hostname
+- sudo hostnamectl set-hostname Squires-AMI
+- hostname
+
+  ## Docker installtion
+- sudo dnf update -y
+- sudo dnf install -y docker
+- sudo systemctl start docker
+- docker --version
+
 
